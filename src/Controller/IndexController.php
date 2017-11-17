@@ -1,5 +1,7 @@
 <?php
 
+namespace Controller;
+
 class IndexController
 {
     public function index() {
@@ -7,8 +9,6 @@ class IndexController
             "title" => "Welcome!",
             "name" => "World"
         ];
-        require_once dirname(__FILE__) . "/../view/index.php";
+        require_once __DIR__ . "/../View/Index.php";
     }
 }
-
-$indexController = new IndexController();

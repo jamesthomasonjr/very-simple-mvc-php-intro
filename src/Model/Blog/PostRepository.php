@@ -1,6 +1,8 @@
 <?php
 
-class BlogPostModel
+namespace Model\Blog;
+
+class PostRepository
 {
     public function getAllBlogPosts() {
         return [
@@ -13,5 +15,3 @@ class BlogPostModel
         return true;
     }
 }
-
-$blogPostModel = new BlogPostModel();

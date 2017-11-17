@@ -1,6 +1,8 @@
 <?php
 
-class errorController
+namespace Controller;
+
+class ErrorController
 {
     public function notFound() {
         http_response_code(404);
@@ -9,7 +11,7 @@ class errorController
             "title" => "404!",
             "message" => "404 Not Found"
         ];
-        require_once dirname(__FILE__) . "/../view/error.php";
+        require_once __DIR__ . "/../View/Error.php";
     }
 
     public function internalServerError() {
@@ -19,8 +21,6 @@ class errorController
             "title" => "500!",
             "message" => "500 Internal Server Error"
         ];
-        require_once dirname(__FILE__) . "/../view/error.php";
+        require_once __DIR__ . "/../View/Error.php";
     }
 }
-
-$errorController = new ErrorController();
